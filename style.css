@@ -105,3 +105,52 @@ body {
 }
       
 
+@media (max-width: 768px)  {
+
+    /* Body padding for small screens */
+    body {
+        padding: 10px;
+    }
+
+    /* Buttons on home page */
+    .home-buttons {
+        gap: 15px;
+        margin: 20px 10px;
+    }
+
+    .home-buttons button {
+        font-size: 20px;
+        padding: 22px 0;
+    }
+
+    /* Gallery: switch from 3 columns to 1 column */
+    .gallery {
+        grid-template-columns: 1fr; /* single column */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Cards & images */
+    .card img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    /* Big image (animal detail page) */
+    .big-image {
+        width: 80%;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    /* Back button */
+    .back-btn {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
