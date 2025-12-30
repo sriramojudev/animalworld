@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Types of Tigers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+
+            <img id="imgsrc" class="big-image">
+            <h1><p id="headertext"></p></h1>
+            <p id="desc"></p>
+        <br>
+        <a href="tiger.html" class="back-btn">← Back to Tiger</a>
+        <a href="index.html" class="back-btn">← Back to Animals</a>
+
+</body>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+
+        if (type.match("bengaltiger")) {
+            document.getElementById('imgsrc').src = "images/bengaltiger.jpg";
+            document.getElementById('desc').textContent = "The Bengal Tiger (Panthera tigris tigris) is native to India, Bangladesh, Nepal, and Bhutan. It is the most numerous tiger subspecies and is known for its striking orange coat with black stripes. Bengal tigers are apex predators, playing a crucial role in controlling prey populations and maintaining ecological balance. They are endangered due to habitat loss, poaching, and human-wildlife conflict.";
+            document.getElementById('headertext').textContent = "Bengal Tiger";
+        }
+        
+
+        else if (type.match("caspiantiger")) {
+            document.getElementById('imgsrc').src = "images/caspiantiger.jpg";
+            document.getElementById('desc').textContent = "The Caspian Tiger (Panthera tigris virgata) was once found in Central Asia, including Iran, Turkey, and parts of Russia. It is now extinct in the wild, primarily due to hunting and habitat destruction. Caspian tigers were known for their large size and adaptability to diverse habitats, from forests to river valleys.";
+            document.getElementById('headertext').textContent = "Caspian Tiger";
+        }
+
+        else if (type.match("indochinesetiger")) {
+            document.getElementById('imgsrc').src = "images/indochinesetiger.jpg";
+            document.getElementById('desc').textContent = "The Indochinese Tiger (Panthera tigris corbetti) inhabits Southeast Asia, including Thailand, Vietnam, Cambodia, and Laos. Smaller than the Bengal tiger, it has a darker coat and narrow stripes. These tigers are solitary and territorial, playing a key role in regulating prey populations. They are endangered, facing threats from deforestation and poaching.";
+            document.getElementById('headertext').textContent = "Indochinese Tiger";
+        }
+
+        else if (type.match("malayantiger")) {
+            document.getElementById('imgsrc').src = "images/malayantiger.jpg";
+            document.getElementById('desc').textContent = "The Malayan Tiger (Panthera tigris jacksoni) is found in the tropical forests of Peninsular Malaysia. It is relatively small compared to other tiger subspecies and is highly adaptable to dense forests. Malayan tigers are critically endangered due to habitat fragmentation and illegal hunting.";
+            document.getElementById('headertext').textContent = "Malayan Tiger";
+        }
+
+        else if (type.match("siberiantiger")) {
+            document.getElementById('imgsrc').src = "images/siberiantiger.jpg";
+            document.getElementById('desc').textContent = "The Siberian Tiger (Panthera tigris altaica), also called the Amur tiger, is native to the Russian Far East. It is the largest tiger subspecies, with a thick coat to survive cold climates. Siberian tigers are solitary apex predators, maintaining the balance of their forest ecosystems. Conservation efforts have helped their population recover from near extinction.";
+            document.getElementById('headertext').textContent = "Siberian Tiger";
+        }
+
+        else if (type.match("southchinatiger")) {
+            document.getElementById('imgsrc').src = "images/southchinatiger.jpg";
+            document.getElementById('desc').textContent = "The South China Tiger (Panthera tigris amoyensis) is one of the rarest tiger subspecies and is considered functionally extinct in the wild. Native to China, it is smaller than other tigers and adapted to mountainous forests. Conservation programs are attempting captive breeding and reintroduction to save the subspecies.";
+            document.getElementById('headertext').textContent = "Southchina Tiger";
+        }
+    };
+</script>
+</html>

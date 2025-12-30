@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #607d3b;
+}
+
+/* Container for buttons */
+.home-buttons {
+    display: flex;
+    flex-direction: column; /* vertical stack */
+    gap: 20px;              /* space between buttons */
+    margin: 30px 20px;      /* leave space for title */
+}
+
+/* Base button style */
+.home-buttons button {
+    padding: 40px 0;        /* make buttons tall */
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 0;       /* full width, no rounded corners */
+    border: none;
+    width: 100%;            /* full width of container */
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Hover effect */
+.home-buttons button:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Animal-themed backgrounds */
+.lion-btn {
+    background-color: #FFA500; /* orange for lions */
+}
+
+.tiger-btn {
+    background-color: #FF6600; /* tiger orange */
+}
+
+.elephant-btn {
+    background-color: #808080; /* gray for elephants */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 250px); /* 3 fixed columns */
+    gap: 30px;
+    justify-content: center; /* centers grid horizontally */
+    margin-top: 40px;
+}
+
+
+.card img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+.card p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.big-image {
+        width: 30%;          /* smaller than before */
+        max-width: 300px;    /* optional max width */
+        height: auto;        /* keep aspect ratio */
+        display: block;
+        margin: 30px auto;   /* center horizontally */
+        border-radius: 10px; /* optional styling */
+    }
+
+    @media screen and (max-width: 600px) {
+    .home-buttons button {
+        font-size: 20px;
+        padding: 20px 0;  /* adjust height for smaller screens */
+    }
+}
+      
+

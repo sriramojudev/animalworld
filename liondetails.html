@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Types of Elephant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+
+            <img id="imgsrc" class="big-image">
+            <h1><p id="headertext"></p></h1>
+            <p id="desc"></p>
+        <br>
+        <a href="lion.html" class="back-btn">← Back to Lions</a>
+        <a href="index.html" class="back-btn">← Back to Animals</a>
+
+</body>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+
+        if (type.match("barbarylion")) {
+            document.getElementById('imgsrc').src = "images/barbarylion.jpg";
+            document.getElementById('desc').textContent = "The Barbary Lion (Panthera leo leo) was once found in North Africa and is known for its large size and dark, impressive mane. It is considered extinct in the wild due to hunting and habitat loss, but some descendants survive in captivity. Barbary lions were social animals, living in prides and playing an important role as apex predators in their ecosystem.";
+            document.getElementById('headertext').textContent = "Barbary Lion";
+        }
+        
+
+        else if (type.match("congolion")) {
+            document.getElementById('imgsrc').src = "images/congolion.jpg";
+            document.getElementById('desc').textContent = "The Congo Lion (Panthera leo azandica) is a rare subspecies found in the forests of Central Africa. Smaller and darker than the African savannah lions, these lions are elusive and adapted to dense forest habitats. They are endangered due to habitat destruction and poaching.";
+            document.getElementById('headertext').textContent = "Congo Lion";
+        }
+
+        else if (type.match("europeanlion")) {
+            document.getElementById('imgsrc').src = "images/europelion.jpg";
+            document.getElementById('desc').textContent = "The European Lion (Panthera leo europaea) is an extinct subspecies that once lived in parts of southern Europe. They were smaller than African lions and adapted to the European climate and landscapes. These lions played a significant role as apex predators before their extinction due to hunting and human expansion.";
+            document.getElementById('headertext').textContent = "European Lion";
+        }
+
+        else if (type.match("pantheralion")) {
+            document.getElementById('imgsrc').src = "images/pantheralion.jpg";
+            document.getElementById('desc').textContent = "The Panthera leo melanochaita, also called the Southern African lion, is found in southern and eastern Africa. They are known for their robust build and large, dark manes in males. These lions live in prides, are apex predators, and help maintain the balance of the ecosystems they inhabit.";
+            document.getElementById('headertext').textContent = "Panthera leo melanochaita";
+        }
+
+        else if (type.match("srilankanlion")) {
+            document.getElementById('imgsrc').src = "images/srilankalion.jpg";
+            document.getElementById('desc').textContent = "The Sri Lankan Lion (Panthera leo sinhaleyus) is an extinct subspecies that once lived in Sri Lanka. These lions were slightly smaller than African lions and were adapted to tropical forests. They played a key role in their ecosystem as top predators before disappearing due to hunting and habitat loss.";
+            document.getElementById('headertext').textContent = "Srilankan Lion";
+        }
+
+        else if (type.match("transvaallion")) {
+            document.getElementById('imgsrc').src = "images/trasvaallionjpg.jpg";
+            document.getElementById('desc').textContent = "The Transvaal Lion (Panthera leo krugeri), also called the Southeast African lion, is native to southern Africa. It is characterized by a lighter coat and often a large mane in males. Transvaal lions live in prides and are crucial for controlling herbivore populations, helping maintain ecological balance.";
+            document.getElementById('headertext').textContent = "Transvaal Lion";
+        }
+    };
+</script>
+</html>

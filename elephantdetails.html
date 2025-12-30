@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Types of Elephants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+
+            <img id="imgsrc" class="big-image">
+            <h1><p id="headertext"></p></h1>
+            <p id="desc"></p>
+        <br>
+        <a href="elephant.html" class="back-btn">← Back to Elephants</a>
+        <a href="index.html" class="back-btn">← Back to Animals</a>
+
+</body>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+
+        if (type.match("africanbush")) {
+            document.getElementById('imgsrc').src = "images/africanbushelephant.jpg";
+            document.getElementById('desc').textContent = "The African Bush Elephant (Loxodonta africana) is the largest living land animal and is found in sub-Saharan Africa. They have large ears that help regulate body temperature and long tusks made of ivory. These elephants live in herds led by a matriarch and are known for their intelligence and strong social bonds. They play a crucial role in their ecosystems by shaping habitats and dispersing seeds. However, they are endangered due to poaching and habitat loss.";
+            document.getElementById('headertext').textContent = "African Bush Elephant";
+        }
+        
+
+        else if (type.match("africanforest")) {
+            document.getElementById('imgsrc').src = "images/africanforestelephant.jpg";
+            document.getElementById('desc').textContent = "The African Forest Elephant (Loxodonta cyclotis) is smaller than its bush relative and lives mainly in dense rainforests of Central and West Africa. With straighter tusks and rounded ears, these elephants are well-adapted to forest life. They are shy and elusive but play a crucial ecological role by dispersing seeds and maintaining forest health. This subspecies is critically endangered due to poaching and deforestation.";
+            document.getElementById('headertext').textContent = "African Forest Elephant";
+        }
+
+        else if (type.match("african")) {
+            document.getElementById('imgsrc').src = "images/africanelephant.jpg";
+            document.getElementById('desc').textContent = "The term African Elephant usually refers to both the Bush and Forest subspecies. They are distinguished by their size and habitat, with the African Elephant being the largest land mammal. These elephants are social, intelligent, and form complex family groups. They are vital to their ecosystems, helping maintain vegetation and water sources. Unfortunately, they face severe threats from poaching and encroachment of human settlements.";
+            document.getElementById('headertext').textContent = "African Elephant";
+        }
+
+        else if (type.match("asian")) {
+            document.getElementById('imgsrc').src = "images/asianelephant.jpg";
+            document.getElementById('desc').textContent = "The Asian Elephant (Elephas maximus) is smaller than the African elephant and has smaller ears and a domed head. Found across India and Southeast Asia, they are intelligent, social animals that live in family herds. Asian elephants are important for forest ecosystems, dispersing seeds and creating pathways that other animals use. They are endangered due to habitat loss, human-elephant conflicts, and illegal hunting.";
+            document.getElementById('headertext').textContent = "Asian Elephant";
+        }
+
+        else if (type.match("indian")) {
+            document.getElementById('imgsrc').src = "images/indianelephant.jpg";
+            document.getElementById('desc').textContent = "The Indian Elephant (Elephas maximus indicus) is a subspecies of the Asian elephant native to India, Nepal, Bhutan, and Sri Lanka. Smaller than African elephants, they have smaller ears and a more rounded back. Indian elephants are highly intelligent, social animals that live in herds led by older females. They are essential for forest ecosystems, dispersing seeds and creating clearings that help other wildlife. Unfortunately, they are endangered due to habitat loss, human-elephant conflicts, and poaching.";
+            document.getElementById('headertext').textContent = "Indian Elephant";
+        }
+
+        else if (type.match("srilankan")) {
+            document.getElementById('imgsrc').src = "images/srilankanelephant.jpg";
+            document.getElementById('desc').textContent = "The Sri Lankan Elephant (Elephas maximus maximus) is a subspecies of the Asian elephant found only in Sri Lanka. They are slightly larger than other Asian elephants and are known for their distinctive darker skin and long, curved tusks in males. Sri Lankan elephants live in forests and grasslands, forming tight family herds led by older females. They play a crucial role in their ecosystems by dispersing seeds and maintaining vegetation. They are classified as endangered due to habitat loss, human-elephant conflicts, and poaching.";
+            document.getElementById('headertext').textContent = "SriLankan Elephant";
+        }
+    };
+</script>
+</html>
